@@ -40,7 +40,7 @@ const Reviews = () => {
           ))}
         </ReviewList>
       ) : (
-        <NoInfo>Sorry, we do not have any reviews for this movie.</NoInfo>
+        <NoInfo>We don't have any reviews for this movie.</NoInfo>
       )}
     </Container>
   );
