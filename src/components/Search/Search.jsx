@@ -17,6 +17,7 @@ const SearchMovies = ({ onSubmit }) => {
   return (
     <Form onSubmit={handleSubmit}>
       <Input
+        name='query'
         type="text"
         autoComplete="off"
         autoFocus

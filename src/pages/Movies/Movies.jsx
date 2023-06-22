@@ -9,9 +9,9 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
-  const query = searchParams.get('query') ?? '';
 
   useEffect(() => {
+    const query = searchParams.get('query') ?? '';
     if (!query) return;
     const fetchMovie = async () => {
       try {
@@ -32,6 +32,7 @@ const Movies = () => {
   }, [searchParams]);
 
   const handleSubmit = searchQuery => {
+    const query = searchParams.get('query') ?? '';
     if (searchQuery === query) {
       toast.error(`This word has already been searched for. Try another one.`);
       return;
